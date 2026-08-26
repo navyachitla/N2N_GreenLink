@@ -1,0 +1,29 @@
+# Maven / Java Build Artifacts
+backend/target/
+backend/*.jar
+backend/*.war
+
+# Node / React Build Artifacts
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Uploads & Media Scratch Files
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# IDE / Editor Files
+.vscode/
+.idea/
+*.swp
+*.DS_Store
+Thumbs.db
+
+# OS Generated Files
+desktop.ini
