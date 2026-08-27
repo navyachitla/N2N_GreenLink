@@ -81,8 +81,8 @@ export const MyOrdersPage = () => {
                   <tr key={item.id} style={{ borderBottom: '1px solid #f1f5f9' }}>
                     <td style={{ padding: '0.6rem 0', fontWeight: 600, color: '#0f172a' }}>{item.productName}</td>
                     <td style={{ padding: '0.6rem 0', textAlign: 'center' }}>{item.quantity}</td>
-                    <td style={{ padding: '0.6rem 0', textAlign: 'right' }}>${Number(item.pricePerUnit).toFixed(2)}</td>
-                    <td style={{ padding: '0.6rem 0', textAlign: 'right', fontWeight: 700 }}>${Number(item.subtotal).toFixed(2)}</td>
+                    <td style={{ padding: '0.6rem 0', textAlign: 'right' }}>₹{Number(item.pricePerUnit).toFixed(2)}</td>
+                    <td style={{ padding: '0.6rem 0', textAlign: 'right', fontWeight: 700 }}>₹{Number(item.subtotal).toFixed(2)}</td>
                   </tr>
                 ))}
               </tbody>
@@ -91,7 +91,7 @@ export const MyOrdersPage = () => {
             {/* Total Summary */}
             <div style={{ borderTop: '2px solid #0f172a', paddingTop: '0.75rem', display: 'flex', justifyContent: 'space-between', fontSize: '1.1rem', fontWeight: 800, color: '#0f172a', marginBottom: '1.5rem' }}>
               <span>Grand Total</span>
-              <span style={{ color: '#059669' }}>${Number(selectedReceiptOrder.totalAmount).toFixed(2)}</span>
+              <span style={{ color: '#059669' }}>₹{Number(selectedReceiptOrder.totalAmount).toFixed(2)}</span>
             </div>
 
             <div style={{ background: '#ecfdf5', padding: '0.75rem', borderRadius: '8px', fontSize: '0.8rem', color: '#065f46', textAlign: 'center', marginBottom: '1.5rem' }}>
@@ -136,7 +136,7 @@ export const MyOrdersPage = () => {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <span className={`badge badge-${order.status.toLowerCase()}`}>{order.status}</span>
                   <span style={{ fontWeight: 800, fontSize: '1.3rem', color: '#059669' }}>
-                    ${Number(order.totalAmount).toFixed(2)}
+                    ₹{Number(order.totalAmount).toFixed(2)}
                   </span>
                   <button onClick={() => setSelectedReceiptOrder(order)} className="btn btn-secondary btn-sm">
                     <FileText size={16} /> Receipt
@@ -156,11 +156,11 @@ export const MyOrdersPage = () => {
                     <div style={{ flex: 1 }}>
                       <div style={{ fontWeight: 600, fontSize: '0.95rem' }}>{item.productName}</div>
                       <div style={{ fontSize: '0.8rem', color: '#64748b' }}>
-                        Qty: {item.quantity} × ${Number(item.pricePerUnit).toFixed(2)}
+                        Qty: {item.quantity} × ₹{Number(item.pricePerUnit).toFixed(2)}
                       </div>
                     </div>
                     <div style={{ fontWeight: 700, fontSize: '0.95rem' }}>
-                      ${Number(item.subtotal).toFixed(2)}
+                      ₹{Number(item.subtotal).toFixed(2)}
                     </div>
                   </div>
                 ))}

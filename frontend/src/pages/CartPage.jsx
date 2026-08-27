@@ -91,7 +91,7 @@ export const CartPage = () => {
                 <div style={{ flex: 1 }}>
                   <h4 style={{ fontSize: '1rem', color: '#0f172a', marginBottom: '0.25rem' }}>{item.product.name}</h4>
                   <div style={{ fontSize: '0.85rem', color: '#059669', fontWeight: 700 }}>
-                    ${Number(item.product.price).toFixed(2)} each
+                    ₹{Number(item.product.price).toFixed(2)} each
                   </div>
                 </div>
 
@@ -102,7 +102,7 @@ export const CartPage = () => {
                 </div>
 
                 <div style={{ fontWeight: 800, minWidth: '70px', textAlign: 'right' }}>
-                  ${(Number(item.product.price) * item.quantity).toFixed(2)}
+                  ₹{(Number(item.product.price) * item.quantity).toFixed(2)}
                 </div>
 
                 <button onClick={() => removeFromCart(item.product.id)} style={{ background: 'none', border: 'none', color: '#ef4444', cursor: 'pointer', padding: '0.25rem' }}>
@@ -114,7 +114,7 @@ export const CartPage = () => {
 
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1.5rem', paddingTop: '1rem', borderTop: '2px solid #e2e8f0', fontSize: '1.2rem', fontWeight: 800 }}>
             <span>Subtotal</span>
-            <span style={{ color: '#059669' }}>${totalAmount.toFixed(2)}</span>
+            <span style={{ color: '#059669' }}>₹{totalAmount.toFixed(2)}</span>
           </div>
         </div>
 
@@ -166,7 +166,7 @@ export const CartPage = () => {
             </div>
 
             <button type="submit" className="btn btn-primary btn-lg" style={{ width: '100%' }} disabled={loading}>
-              {loading ? 'Processing Order...' : `Place Order ($${totalAmount.toFixed(2)})`}
+              {loading ? 'Processing Order...' : `Place Order (₹${totalAmount.toFixed(2)})`}
             </button>
           </form>
         </div>

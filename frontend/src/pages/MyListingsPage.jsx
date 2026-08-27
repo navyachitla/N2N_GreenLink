@@ -91,7 +91,7 @@ export const MyListingsPage = () => {
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                     <span className={`badge badge-${order.status.toLowerCase()}`}>{order.status}</span>
-                    <span style={{ fontWeight: 800, color: '#059669', fontSize: '1.1rem' }}>${Number(order.totalAmount).toFixed(2)}</span>
+                    <span style={{ fontWeight: 800, color: '#059669', fontSize: '1.1rem' }}>₹{Number(order.totalAmount).toFixed(2)}</span>
                   </div>
                 </div>
 
@@ -99,7 +99,7 @@ export const MyListingsPage = () => {
                   {order.items.map(item => (
                     <div key={item.id} style={{ display: 'flex', justifyContent: 'space-between', padding: '0.25rem 0' }}>
                       <span>• <strong>{item.productName}</strong> (Qty: {item.quantity})</span>
-                      <span style={{ fontWeight: 600 }}>${Number(item.subtotal).toFixed(2)}</span>
+                      <span style={{ fontWeight: 600 }}>₹{Number(item.subtotal).toFixed(2)}</span>
                     </div>
                   ))}
                 </div>
@@ -156,7 +156,7 @@ export const MyListingsPage = () => {
 
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
                   <span className={`badge badge-${item.status.toLowerCase()}`}>{item.status}</span>
-                  <span style={{ fontWeight: 800, color: '#059669', fontSize: '1.2rem' }}>${Number(item.price).toFixed(2)}</span>
+                  <span style={{ fontWeight: 800, color: '#059669', fontSize: '1.2rem' }}>₹{Number(item.price).toFixed(2)}</span>
                 </div>
 
                 <h3 style={{ fontSize: '1.1rem', marginBottom: '0.35rem' }}>{item.name}</h3>
@@ -199,7 +199,7 @@ export const MyListingsPage = () => {
 
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
                 <span className={`badge badge-${item.status.toLowerCase()}`}>{item.status}</span>
-                <span style={{ fontWeight: 800, color: '#059669', fontSize: '1.2rem' }}>${Number(item.price).toFixed(2)}</span>
+                <span style={{ fontWeight: 800, color: '#059669', fontSize: '1.2rem' }}>₹{Number(item.price).toFixed(2)}</span>
               </div>
 
               <h3 style={{ fontSize: '1.1rem', marginBottom: '0.35rem' }}>{item.name}</h3>

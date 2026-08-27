@@ -116,7 +116,7 @@ export const ProductDetailsPage = () => {
           <h1 style={{ fontSize: '2rem', color: '#0f172a', marginBottom: '0.5rem' }}>{product.name}</h1>
 
           <div style={{ fontSize: '2rem', fontWeight: 800, color: '#059669', marginBottom: '1.25rem' }}>
-            ${Number(product.price).toFixed(2)}
+            ₹{Number(product.price).toFixed(2)}
           </div>
 
           <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>

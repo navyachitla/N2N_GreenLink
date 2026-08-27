@@ -124,7 +124,7 @@ export const AdminProductsPage = () => {
 
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
                 <span className={`badge badge-${item.status.toLowerCase()}`}>{item.status}</span>
-                <span style={{ fontWeight: 800, color: '#059669', fontSize: '1.2rem' }}>${Number(item.price).toFixed(2)}</span>
+                <span style={{ fontWeight: 800, color: '#059669', fontSize: '1.2rem' }}>₹{Number(item.price).toFixed(2)}</span>
               </div>
 
               <h3 style={{ fontSize: '1.1rem', marginBottom: '0.35rem' }}>{item.name}</h3>

@@ -147,7 +147,7 @@ export const Home = () => {
                   />
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
                     <span className="badge badge-approved">{product.categoryName || 'Eco Product'}</span>
-                    <span style={{ fontWeight: 800, color: '#059669', fontSize: '1.2rem' }}>${Number(product.price).toFixed(2)}</span>
+                    <span style={{ fontWeight: 800, color: '#059669', fontSize: '1.2rem' }}>₹{Number(product.price).toFixed(2)}</span>
                   </div>
                   <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>{product.name}</h3>
                   <p style={{ color: '#64748b', fontSize: '0.85rem', flex: 1, marginBottom: '1rem' }}>

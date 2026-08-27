@@ -93,7 +93,7 @@ export const MarketplacePage = () => {
               />
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
                 <span className="badge badge-approved">{product.categoryName || 'Eco Product'}</span>
-                <span style={{ fontWeight: 800, color: '#059669', fontSize: '1.3rem' }}>${Number(product.price).toFixed(2)}</span>
+                <span style={{ fontWeight: 800, color: '#059669', fontSize: '1.3rem' }}>₹{Number(product.price).toFixed(2)}</span>
               </div>
 
               <h3 style={{ fontSize: '1.15rem', marginBottom: '0.25rem', color: '#0f172a' }}>{product.name}</h3>
