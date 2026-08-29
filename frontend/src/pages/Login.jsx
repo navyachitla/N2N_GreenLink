@@ -27,7 +27,8 @@ export const Login = () => {
       }
     } catch (err) {
       console.error(err);
-      setError(err.response?.data?.message || 'Invalid credentials. Please try again.');
+      const serverMsg = err.response?.data?.message || err.response?.data?.error || err.message;
+      setError(serverMsg || 'Invalid credentials. Please try again.');
     } finally {
       setLoading(false);
     }
